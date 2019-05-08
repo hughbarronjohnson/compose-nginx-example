@@ -1,0 +1,23 @@
+version: '2'
+services:
+  proxy:
+    build: custom-nginx
+    ports:
+     - "80:80"
+    restart: always
+  classic-web:
+    build: apache
+    restart: always
+    environment:
+      - CONTNAME=classic-martini
+  vesper-web:
+    build: apache
+    restart: always
+    environment:
+      - CONTNAME=vesper-martini
+  dirty-web:
+    image: tomcat:9.0
+    restart: always
+    environment:
+      - CONTNAME=dirty-martini
+ 
