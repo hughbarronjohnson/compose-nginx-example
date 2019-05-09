@@ -10,7 +10,7 @@ This project uses docker-compose to create a nginx containers that serves as a f
 Clone or download the project, change directory into the project and type: 
 
 ```
-docker-compose -d up
+docker-compose up -d
 ```
 
 Once it is up and running, try these different urls in your browers (the all resolved to 127.0.0.1)
@@ -34,7 +34,7 @@ If you make changes to the Dockerfiles, or the underlying configs, be sure and r
 
 ```
 docker-compose build
-docker-compase -d up
+docker-compase up -d
 ```
 
 ## Author
